@@ -26,6 +26,7 @@ if webfaction.checkSite():
 		webfaction.gitPull()
 		print "Pull successful"
 		print "Building Site..."
+		webfaction.npmInstall()
 		webfaction.buildSite()
 		print "Build successful"
 	sys.exit()
@@ -41,11 +42,20 @@ if webfaction.checkApp():
 else:
 	print "Starting webApp configuration..."
 	webfaction.createApp()
+	webfaction.gitClone()
 	# webfaction.addHtaccess()
 	print "Finished webApp configuration"
 
+#1. Create SymLink
+if webfaction.checkLink():
+	print "Warning: The symLink " + siteConfig.appLink + " has already been created on the server."
+else:
+	print "Starting symlink configuration..."
+	webfaction.createLink()
+	print "Finished symlink configuration"
 
-#2. Create Domain
+
+#3. Create Domain
 if webfaction.checkDomain():
 	print "Warning: The domain " + siteConfig.domainName + " has already been created on the server."
 else:
@@ -54,23 +64,27 @@ else:
 	print "Finished domain configuration"
 
 
-#3. Create website
+#4. Create website
 print "Starting website configuration..."
 webfaction.createSite()
-webfaction.gitClone()
 print "Finished website configuration"
 
 
-#4. Print results of new website setup
+#5. Build site on server
+print "Starting npm install on server, this make take some time..."
+webfaction.npmInstall()
+print "Finished npm install process"
+print "Starting build process"
+webfaction.buildSite()
+print "Finished build process"
+
+
+#5. Print results of new website setup
 print "Your website has been set up and configured."
 print webfaction.checkSite()
 
 
 #=============================
 #End settting up the server
-
-#5. Build site on server
-print "Starting build process"
-webfaction.runCmd("npm run compile:sass")
 
 sys.exit()

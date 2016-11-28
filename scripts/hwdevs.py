@@ -35,7 +35,7 @@ class Webfaction(object):
                 return True
         return False
 
-    def createLink(self, appType='symlink_static_only'):
+    def createLink(self, appType='symlink56'):
         self.server.create_app(
     		self.session_id,
     		self.siteConfig.appLink,
@@ -76,15 +76,19 @@ class Webfaction(object):
         self.server.system(self.session_id, commandAtApp)
 
     def gitClone(self):
-        initGit = "cd /home/danlinn/webapps/"+self.siteConfig.appName+" && if [ -e index.html ]; then rm index.html; fi && git clone -q " + self.siteConfig.repoUrl + " . 2>&1 | grep -v 'warning: You appear to have cloned an empty repository.'"
+        initGit = "cd /home/danlinn/webapps/"+self.siteConfig.appName+" && if [ -e index.html ]; then rm index.html; fi && git clone -q "+self.siteConfig.repoUrl+" ."
         self.server.system(self.session_id, initGit)
 
     def gitPull(self):
         gitPull = "cd /home/danlinn/webapps/"+self.siteConfig.appName+" && git pull -q origin master"
         self.server.system(self.session_id, gitPull)
         
+    def npmInstall(self):
+        installCmd = "cd /home/danlinn/webapps/"+self.siteConfig.appName+" && ~/bin/npm run install --silent"
+        self.server.system(self.session_id, installCmd)
+        
     def buildSite(self):
-        buildCmd = "cd /home/danlinn/webapps/"+self.siteConfig.appName+" && npm install && npm run build"
+        buildCmd = "cd /home/danlinn/webapps/"+self.siteConfig.appName+" && ~/bin/npm run build --silent"
         self.server.system(self.session_id, buildCmd)
         
 
