@@ -1,0 +1,44 @@
+.owl-carousel .owl-nav [class*=owl-] {
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  right: 0px;
+  zoom: 1;
+  width: 60px;
+  height: 60px;
+  line-height: 32px;
+  border: none;
+  color: $c-white;
+  background-color: rgba($c-black-grey, 0.85);
+  font-size: 32px;
+  border-radius: $spacing-xs;
+  opacity: 1;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  & [class*=icon-] {
+    position: absolute;
+    left: 30px;
+    top: 14px;
+    width: 32px;
+    margin-left: -16px;
+  }
+}
+.owl-carousel .owl-nav .owl-prev {
+  left: 0;
+}
+
+.owl-carousel:hover .owl-nav .owl-next {
+  left: auto;
+  right: 0;
+}
+.owl-carousel:hover .owl-nav .owl-prev {
+  opacity: 1;
+  left: 0;
+}
+
+.owl-carousel .owl-nav [class*=owl-]:hover {
+  background-color: darken($c-black-grey, 10%) !important;
+  color: $c-white !important;
+  text-decoration: none;
+}

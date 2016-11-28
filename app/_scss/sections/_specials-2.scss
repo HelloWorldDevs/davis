@@ -1,0 +1,105 @@
+#section-specials {
+
+  .container-wrapper {
+    background-image: url('/assets/specials-bg.jpg');
+    @include parallax-background;
+    padding-top: $spacing-lg;
+  }
+
+  .heading {
+    padding-bottom: $spacing-md;
+    padding-top: $spacing-md;
+    h2 {
+      color: $c-blue-2;
+      margin-bottom: 0;
+      line-height: $lh-sm;
+      font-weight: 600;
+    }
+    h3 {
+      color: $c-yellow;
+      font-family: $ff-open;
+      margin-bottom: 0;
+      line-height: $lh-sm;
+      font-weight: 400;
+    }
+  }
+
+  .card {
+    background-color: rgba($c-white, 0);
+    text-align: center;
+    height: 100%;
+    border-radius: $spacing-sm;
+    color: $c-white;
+
+
+    .top {
+      .price {
+        position: relative;
+        display: inline-block;
+        border-radius: 10000px;
+        height: 130px;
+        width: 130px;
+      }
+      h1 {
+        color: $c-white;
+        margin-bottom: 0;
+        padding: $spacing-sm;
+        padding-top: $spacing-md;
+        line-height: $lh-xs;
+        font-family: $ff-open;
+        font-weight: 700;
+        &:before {
+          content: '$';
+          font-size: 22px;
+          font-weight: 400;
+          position: absolute;
+          top: $spacing-md;
+          left: 12px;
+        }
+
+      }
+      h3 {
+        font-family: $ff-lato;
+        color: $c-white;
+        margin-bottom: 0;
+        line-height: $lh-xs;
+        padding-top: $spacing-md;
+        font-size: 28px;
+        padding-bottom: $spacing-xs;
+      }
+    }
+
+    .bottom {
+      h6:first-child {
+        padding-top: $spacing-md;
+      }
+      .copy {
+        font-family: $ff-open;
+        padding-left: $spacing-sm;
+        padding-right: $spacing-sm;
+        color: $c-white;
+      }
+      p {
+        padding-bottom: $spacing-md;
+        color: $c-white;
+      }
+    }
+  }
+  .card-1 .price {  background-color: $c-card1;  }
+  .card-2 .price {  background-color: $c-card2;  }
+  .card-3 .price {  background-color: $c-card3;  }
+  .card-1 h6:first-child {  color: $c-white;  }
+  .card-2 h6:first-child {  color: $c-white;  }
+  .card-3 h6:first-child {  color: $c-white;  }
+
+  .row {
+    display: flex;
+    padding-bottom: $spacing-xl;
+    @media screen and (max-width: $width-sm) {
+      display: block;
+      .card {
+        margin-bottom: $spacing-md;
+      }
+    }
+  }
+}

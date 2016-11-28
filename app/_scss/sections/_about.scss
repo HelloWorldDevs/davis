@@ -1,0 +1,36 @@
+#section-about {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-image: url('/assets/bg-tile.jpg');
+  @include parallax-background();
+
+  h2 {
+    color: $c-blue-2;
+    font-family: $ff-raleway;
+    @include h3();
+    font-weight: 600;
+  }
+  h3 {
+    @include font-size(36px, 32px, 28px, 26px, 24px);
+    color: $c-white;
+    margin-bottom: $spacing-xs;
+  }
+  h5 {
+    color: $c-white;
+  }
+  p {
+    color: $c-white;
+  }
+
+  img {
+    border-radius: 10000px;
+    border: 4px solid $c-white;
+    @include vertical-center();
+  }
+
+  .row {
+    display: flex;
+  }
+
+}

@@ -1,0 +1,119 @@
+#slider {
+  height: 50vw;
+  max-height: 800px;
+
+  .swiper-slide.slide1 {
+    background-image: url('/assets/slide1.jpg');
+  }
+  .swiper-slide.slide2 {
+    background-image: url('/assets/slide2.jpg');
+  }
+  .swiper-slide.slide3 {
+    background-image: url('/assets/slide3.jpg');
+  }
+
+  .swiper-slide .row {
+    transform: translateY(-50%);
+    top: 50%;
+    position: relative;
+  }
+
+  .slide1 {
+    h4 {
+      line-height: $lh-sm;
+      color: $c-dark-brown;
+      font-family: $ff-lato;
+    }
+    .text-on-logo {
+      position: relative;
+      top: -190px;
+    }
+
+  }
+  .slide2 {
+    h3 {
+      color: $c-grey-brown;
+      font-weight: 700;
+      margin-bottom: 0;
+      font-family: $ff-lato;
+      line-height: $lh-sm;
+      @include font-size(48px, 42px, 36px, 32px, 28px);
+    }
+    .stars {
+      margin-bottom: 0;
+      line-height: $lh-sm;
+      .icon-star3 {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      }
+    }
+    h5 {
+      font-family: $ff-lato;
+      color: $c-grey-brown;
+      margin-bottom: 0;
+      line-height: $lh-lg;
+      margin-right: $spacing-sm;
+      &.quoter {
+        width: 50%;
+        margin-left: auto;
+        padding-bottom: $spacing-md;
+      }
+    }
+    .copy {
+      @include lr-padding(30px, 20px, 10px, 0px, 0px);
+    }
+    .quotee {
+      margin-bottom: $spacing-md;
+    }
+  }
+  .slide3 {
+    h1 {
+      color: $c-dark-brown;
+      margin-bottom: 0;
+      line-height: $lh-sm;
+    }
+    h2 {
+      color: $c-dark-brown;
+      line-height: $lh-sm;
+      font-family: $ff-lato;
+    }
+    h5 {
+      color: $c-dark-brown;
+      font-weight:bold;
+      font-family: $ff-lato;
+      line-height: $lh-sm;
+      margin-bottom: $spacing-lg;
+    }
+    .btn {
+      @include lr-padding(80px, 60px, 60px);
+    }
+  }
+
+  .icon-star3 {
+    color: $c-star;
+  }
+
+}
+
+.animated.infinite.bounce {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+}
+
+.icon-arrow-down {
+  color: white;
+  border: 2px solid white;
+  border-radius: 10000px;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+}
+
+
+#mobile-background {
+  display: none;
+  @media (max-width: $width-md) {
+    display: block;
+    position: relative;
+  }
+}

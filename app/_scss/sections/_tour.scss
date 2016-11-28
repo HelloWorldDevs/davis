@@ -1,0 +1,18 @@
+#section-tour {
+  padding-top: $spacing-xs;
+  background-color: $c-white;
+  border-bottom: 2px solid $c-blue-4;
+
+  .heading {
+    text-align: center;
+    color: $c-blue-3;
+    font-weight: 600;
+    padding-top: $spacing-md;
+    padding-bottom: $spacing-md;
+    margin-bottom: 0;
+  }
+
+  div[class^=owl-item] {
+    @include hover-plus;
+  }
+}

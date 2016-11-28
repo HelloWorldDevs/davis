@@ -1,0 +1,89 @@
+.phone-slab {
+  background-color: $c-white;
+
+  .text {
+    font-family: $ff-open;
+    color: $c-dark-brown;
+  }
+
+  .phone-number {
+    font-family: $ff-lato;
+    color: $c-dark-brown;
+    font-weight: 900;
+    a:hover {
+      color: $c-dark-brown !important;
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+    @media screen and (max-width: $width-md) {
+      margin-bottom: $spacing-sm;
+    }
+    &--sub {
+      font-weight: 700;
+    }
+  }
+
+  .container {
+    padding-top: $spacing-md;
+    padding-bottom: $spacing-md;
+  }
+
+  .row {
+    display: flex;
+    .btn {
+      @include vertical-center();
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  h3,
+  h5,
+  h6 {
+    line-height: $lh-sm;
+    margin-bottom: 0;
+  }
+  h3 {
+    @media screen and (max-width: $width-md) {
+      margin-bottom: $spacing-md;
+    }
+  }
+  .row:first-child {
+    padding-bottom: $spacing-sm;
+  }
+  &__left {
+    text-align: right;
+    margin-top: 5px;
+    @media screen and (max-width: $width-md) {
+      text-align: center;
+      border-right: none;
+    }
+    @media screen and (max-width: $width-sm) {
+    }
+    @media screen and (max-width: $width-xs) {
+    }
+  }
+  &__right {
+    text-align: left;
+    @media screen and (max-width: $width-md) {
+      text-align: center;
+    }
+    @media screen and (max-width: $width-sm) {
+    }
+    @media screen and (max-width: $width-xs) {
+    }
+  }
+
+  //Custom break line color for Paquette
+  &.phone-slab-2 {
+    background-color: $c-teal-lighter;
+    &__left {
+      margin-top: 0;
+      @media screen and (max-width: $width-md) {
+      }
+    }
+  }
+
+}

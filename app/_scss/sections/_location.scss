@@ -1,0 +1,128 @@
+.location-card {
+  background: $c-white;
+  margin: 30px 0;
+  @media (max-width: $width-md) {
+    margin-bottom: 5px;
+    margin-top: 0px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  &__bottom {
+    background-color: #7BD1EA;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  img {
+    padding-top: $spacing-md;
+    padding-bottom: $spacing-sm;
+  }
+  h6 {
+    font-family: $ff-neuton;
+    color: $c-black-blue;
+    margin-bottom: 0;
+    line-height: $lh-sm;
+  }
+  a>h6 {
+    font-family: $ff-neuton;
+    color: $c-teal;
+    padding-bottom: $spacing-md;
+  }
+  .phone-number {
+    line-height: $lh-sm;
+    color: $c-brick;
+    a:hover { color: $c-brick !important; }
+  }
+  .btn {
+    margin-bottom: $spacing-sm;
+  }
+  h6:last-child {
+    padding-bottom: $spacing-lg;
+  }
+}
+
+#google-map5 {
+  height: 700px;
+  @media (max-width: $width-md) {
+    height: 300px;
+  }
+}
+
+#content .floating-card {
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  margin-left: -570px;
+  @media (max-width: $width-lg) {
+    margin-left: -435px;
+  }
+  @media (max-width: $width-md) {
+    padding-left: 0;
+    padding-right: 0;
+    position: static;
+    text-align: center;
+    width: 100% !important;
+    margin-left: 0px;
+    background-color: $c-white;
+    & .floating-card--col-fix {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.hours {
+  & li {
+    list-style: none;
+    text-align: left;
+  }
+}
+
+th {
+width: 1px;
+white-space: nowrap;
+text-align: right;
+}
+
+td {
+  text-align: right;
+}
+
+table {
+  max-width: 250px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.hours .row {
+  @media (max-width: $width-lg) {
+    max-width: 550px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.left-hours-fix {
+  padding-left: 10%;
+  @media (max-width: $width-lg) {
+    padding-left: 30%;
+
+  }
+  @media (max-width: 480px) {
+    padding-left: 7%;
+
+  }
+  @media (max-width: $width-sm) {
+
+  }
+}
+
+#google-map5 {
+  height: 600px;
+  @media (max-width: $width-md) {
+    height: 300px;
+  }
+}
+
+

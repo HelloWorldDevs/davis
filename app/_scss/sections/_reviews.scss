@@ -1,0 +1,48 @@
+#bf-revz-widget-1049750438 {
+  //fix for iphone issue
+  @media screen and (max-width: $width-xs) {
+    max-height: 600px;
+  }
+}
+
+a[href="http://www.tysonsteele.com/"] {
+  color: $c-white;
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+#section-reviews {
+  background-color: #2a1b10;
+  background-image: url('/assets/reviews-layer2-SWIRL.png');
+  background-position-x: 110%;
+  background-position-y: 50px;
+  background-size: contain;
+  padding-bottom: 30px;
+  background-repeat: no-repeat;
+
+  h2 {
+    color: $c-blue;
+    @include h3;
+  }
+  @media screen and (max-width: $width-xs) {
+    padding-bottom: 80px;
+  }
+  .heading {
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    padding-top: $spacing-lg;
+  }
+
+  //Link on bottom of reviews
+  .bf-spn,
+  .bf-pro {
+    color: $c-white !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    padding-top: $spacing-sm;
+    padding-bottom: $spacing-xl;
+    font-family: $ff-roboto;
+    font-size: 14px !important;
+    font-weight: 100;
+  }
+}

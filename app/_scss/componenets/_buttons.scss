@@ -1,0 +1,38 @@
+a.btn,
+button.btn {
+  font-family: $ff-lato;
+  text-transform: uppercase;
+
+  background-color: $c-button-background;
+  color: $c-button-font;
+  border: 2px solid $c-button-border;
+  border-radius: 0.1px;
+  &:hover, &:focus {
+    background-color: darken($c-button-background, 15% );
+    text-decoration: none;
+    color: $c-button-font;
+  }
+
+  padding: $spacing-sm $spacing-md;
+
+  font-size: 18px;
+  @media screen and (max-width: $width-sm) {
+    font-size: 16px;
+  }
+
+  &.shadowed {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.30);
+  }
+
+}
+
+
+button.btn-style-2 {
+  color: #67250d;
+  background: #fbad17;
+  border: 2px solid #67250d;
+}
+
+button.btn {
+  text-transform: uppercase;
+}

@@ -1,0 +1,105 @@
+/// The Nav Color Mixin
+/// @param $color - the text color
+/// @param {number} $child [false] - the `nth-child`
+@mixin nav-color($color, $child:false) {
+  @if $child {
+    li:nth-child(#{$child}) {
+      & a {
+        color: $color;
+        &:hover {
+          color: $color;
+        }
+        &>div {
+          color: $color;
+        }
+      }
+    }
+  } @else {
+    li {
+      & a {
+        color: $color;
+        &:hover {
+          color: $color;
+        }
+        &>div {
+          color: $color;
+        }
+      }
+    }
+  }
+}
+
+/// Static Nav Height - sticky nav menu will not change height when you scroll. Over writes canvas.
+/// @group effect
+/// @example #wrapper { @include static-nav-menu(); }
+@mixin static-nav-menu() {
+  #header.sticky-header:not(.static-sticky),
+  #header.sticky-header:not(.static-sticky) #header-wrap,
+  #header.sticky-header:not(.static-sticky):not(.sticky-style-2):not(.sticky-style-3) #logo img {
+    height: 100px;
+  }
+  #header.sticky-header:not(.static-sticky) #primary-menu > ul > li > a {
+    padding-top: 39px;
+  }
+  #header.sticky-header:not(.static-sticky):not(.sticky-style-2):not(.sticky-style-3) #logo img {
+    transform: translateY(15%);
+  }
+}
+
+#header.full-header {
+  #primary-menu-trigger {
+    font-size: 30px;
+    pointer-events: auto;
+  }
+  & #header-wrap {
+    background-color: $c-white;
+  }
+  & #logo {
+    padding-right: 0;
+    margin-right: 0px;
+    border-right: none;
+  }
+
+  & #primary-menu > ul {
+    margin-right: 0;
+    border-right: none;
+
+    @include nav-color($c-grey);
+    @include nav-color($c-brick, 1);
+    @include nav-color($c-blue, 2);
+    @include nav-color($c-teal, 3);
+  }
+  
+}
+
+#primary-menu ul li > a {
+  font-family: $ff-raleway;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: none;
+  font-size: 17px;
+  padding: 29px 14px;
+  @media screen and (max-width: 1300px) {
+    font-size: 15px;
+    padding: 29px 12px;
+    padding-bottom: 10px;
+  }
+  @media screen and (max-width: $width-lg) {
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    padding: 29px 10px;
+    padding-bottom: 10px;
+  }
+  @media screen and (max-width: 1090px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 991px) {
+    padding-left: 40px !important;
+    font-size: 18px;
+  }
+  @media screen and (max-width: $width-sm) {
+  }
+  @media screen and (max-width: $width-xs) {
+  }
+  padding-bottom: 10px;
+}
