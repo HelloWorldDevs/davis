@@ -48,6 +48,7 @@
         line-height: $lh-xs;
         font-family: $ff-open;
         font-weight: 700;
+        font-size: 72px !important;
         &:before {
           content: '$';
           font-size: 22px;
