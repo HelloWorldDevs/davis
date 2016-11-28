@@ -82,3 +82,20 @@
     @include lr-padding(90px, 90px, 90px, 90px, 90px);
   }
 }
+
+#section-services-carousel {
+  .owl-item {
+    @include hover-plus;
+  }
+  .floating-owl-title {
+    text-align: center;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    color: $c-white;
+    font-weight: 900;
+    font-family: $ff-lato;
+  }
+}
