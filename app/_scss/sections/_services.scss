@@ -57,10 +57,8 @@
   }
 
   .float-image-one {
-    width: 50%;
-    @media screen and (max-width: $width-lg) {
-      width: 60%;
-    }
+    width: 60%;
+    max-width: 700px;
     position: absolute;
     bottom: 0px;
     left: 0px;

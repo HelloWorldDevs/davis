@@ -5,7 +5,7 @@
 
   HelloWorldDevs.prototype.noOrphans = function (selectors, exceptions) {
     $(selectors).not(exceptions).each(function () {
-      $(this).html($(this).html().replace(/\s([^\s<]{0,10})\s*$/, '<span style="font-family:  Helvetica, Arial, sans-serif">&nbsp;</span>$1'));
+      $(this).html($(this).html().replace(/\s([^\s<]{0,10})\s*$/, '&nbsp;$1'));
     });
   };
 
@@ -49,14 +49,14 @@
     loop: true,
     autoplay: true,
     autoplaySpeed: 400,
+    autoplayTimeout: 6000,
+    autoplayHoverPause:true,
     nav: true,
     dots: false,
     navText: [
       '<i class="icon-chevron-left"></i>',
       '<i class="icon-chevron-right"></i>'
     ],
-    autoplayTimeout: 6000,
-    autoplayHoverPause:true,
     responsive: {
       0: {
         items: 2
