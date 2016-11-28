@@ -84,6 +84,8 @@
 }
 
 #section-services-carousel {
+  border-top: white solid 3px;
+  border-bottom: white solid 3px;
   .owl-item {
     @include hover-plus;
   }
