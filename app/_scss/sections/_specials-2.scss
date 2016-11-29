@@ -60,13 +60,15 @@
 
       }
       h3 {
+
         font-family: $ff-lato;
         color: $c-white;
         margin-bottom: 0;
         line-height: $lh-xs;
         padding-top: $spacing-md;
-        font-size: 28px;
-        padding-bottom: $spacing-xs;
+        font-size: 30px;
+        font-weight: 900;
+        padding-bottom: $spacing-sm;
       }
     }
 

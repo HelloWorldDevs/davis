@@ -1,7 +1,10 @@
 #section-tour {
   padding-top: $spacing-xs;
   background-color: $c-white;
-  border-bottom: 2px solid $c-blue-4;
+
+  .tour-carousel {
+    background-color: $c-blue-4;
+  }
 
   .heading {
     text-align: center;

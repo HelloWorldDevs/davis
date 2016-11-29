@@ -41,7 +41,7 @@ a[href="http://www.tysonsteele.com/"] {
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     padding-top: $spacing-sm;
     padding-bottom: $spacing-xl;
-    font-family: $ff-roboto;
+    font-family: $ff-roboto !important;
     font-size: 14px !important;
     font-weight: 100;
   }
