@@ -1,0 +1,37 @@
+#section-certificates {
+  text-align: center;
+
+  p {
+    color: $c-grey;
+    font-size: 16px;
+    font-weight: 100;
+  }
+
+  .right-column {
+    p {
+      display: inline-block;
+    }
+    img {
+      display: inline-block;
+    }
+  }
+
+  .row {
+    @media screen and (min-width: $width-md+1) {
+      display: flex;
+      img {
+        @include vertical-center;
+      }
+      .left-column {
+        padding-left: $spacing-lg;
+        -ms-text-align-last: right;
+        text-align: left;
+      }
+
+      .right-column {
+        text-align: right;
+        padding-right: $spacing-lg;
+      }
+    }
+  }
+}
