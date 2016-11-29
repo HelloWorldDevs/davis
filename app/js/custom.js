@@ -70,6 +70,22 @@
     }
   });
 
+  var $tourModalCarousel = $('.tour-carousel-2');
+  $tourModalCarousel.owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: true,
+    autoplaySpeed: 400,
+    autoplayTimeout: 6000,
+    autoplayHoverPause:true,
+    nav: true,
+    dots: false,
+    navText: [
+      '<img src="assets/chevron.png" alt="nav arrow"></img>',
+      '<img src="assets/chevron.png" alt="nav arrow"></img>'
+    ]
+  });
+
   $('.services-carousel').owlCarousel({
     items: 1,
     loop: true,
@@ -143,6 +159,21 @@
         $(this).attr('data-offset', menuOffsets[index]);
       });
     }
+  });
+
+  // Syncing the tour carousel and modal tour carousel
+  // ======================================================================================
+
+  $('.js-synced-carousel').click(function() {
+    var tourIndex = $(this).attr('js-carousel-target');
+    console.log(tourIndex);
+    $tourModalCarousel.trigger('to.owl.carousel', [ tourIndex , 0] );
+  });
+
+
+  // fix rendering ghost in tour modal
+  $('#tourModal').on('shown.bs.modal', function() {
+    $('.tour-modal-item').removeClass('tour-modal-item');
   });
 
 

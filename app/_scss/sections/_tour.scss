@@ -12,7 +12,10 @@
     margin-bottom: 0;
   }
 
-  div[class^=owl-item] {
+  div[class^=owl-item]>a {
     @include hover-plus;
+  }
+  .tour-carousel-2 {
+    display: hidden;
   }
 }
