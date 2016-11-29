@@ -54,8 +54,8 @@
     nav: true,
     dots: false,
     navText: [
-      '<i class="icon-chevron-left"></i>',
-      '<i class="icon-chevron-right"></i>'
+      '<img src="assets/chevron.png" alt="nav arrow"></img>',
+      '<img src="assets/chevron.png" alt="nav arrow"></img>'
     ],
     responsive: {
       480: {
@@ -80,8 +80,8 @@
     nav: true,
     dots: false,
     navText: [
-      '<i class="icon-chevron-left"></i>',
-      '<i class="icon-chevron-right"></i>'
+      '<img src="assets/chevron.png" alt="nav arrow"></img>',
+      '<img src="assets/chevron.png" alt="nav arrow"></img>'
     ],
     responsive: {
       480: {

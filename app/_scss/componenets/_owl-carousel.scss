@@ -2,39 +2,50 @@
   position: absolute;
   top: 50%;
   margin-top: -30px;
-  right: 0px;
+  right: $spacing-sm;
   zoom: 1;
   width: 60px;
   height: 60px;
   line-height: 32px;
   border: none;
   color: $c-white;
-  background-color: rgba($c-black-grey, 0.85);
+  background-color: rgba($c-blue-9, 0.85);
   font-size: 32px;
-  border-radius: $spacing-xs;
+  border-radius: 0;
   opacity: 1;
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   transition: all .3s ease;
-  & [class*=icon-] {
-    position: absolute;
-    left: 30px;
-    top: 14px;
-    width: 32px;
-    margin-left: -16px;
+  //& [class*=icon-] {
+  //  position: absolute;
+  //  left: 30px;
+  //  top: 14px;
+  //  width: 32px;
+  //  margin-left: -16px;
+  //}
+  img {
+    @include vertical-center;
   }
 }
 .owl-carousel .owl-nav .owl-prev {
-  left: 0;
+  left: $spacing-sm;
+  img {
+    -moz-transform: scaleX(-1) translateY(-50%);
+    -o-transform: scaleX(-1) translateY(-50%);
+    -webkit-transform: scaleX(-1) translateY(-50%);
+    transform: scaleX(-1) translateY(-50%);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+  }
 }
 
 .owl-carousel:hover .owl-nav .owl-next {
   left: auto;
-  right: 0;
+  right: $spacing-sm;
 }
 .owl-carousel:hover .owl-nav .owl-prev {
   opacity: 1;
-  left: 0;
+  left: $spacing-sm;
 }
 
 .owl-carousel .owl-nav [class*=owl-]:hover {
