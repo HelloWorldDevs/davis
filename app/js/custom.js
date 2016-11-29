@@ -83,7 +83,8 @@
     navText: [
       '<img src="assets/chevron.png" alt="nav arrow"></img>',
       '<img src="assets/chevron.png" alt="nav arrow"></img>'
-    ]
+    ],
+    margin: 0
   });
 
   $('.services-carousel').owlCarousel({

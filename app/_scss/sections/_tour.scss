@@ -17,5 +17,9 @@
   }
   .tour-carousel-2 {
     display: hidden;
+
+    .owl-item>.owl-item {
+      width: 100%;
+    }
   }
 }
