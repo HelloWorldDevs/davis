@@ -23,7 +23,7 @@ a[href="http://www.tysonsteele.com/"] {
 
   h2 {
     color: $c-blue;
-    @include h3();
+    @include h2();
   }
   @media screen and (max-width: $width-xs) {
     padding-bottom: 80px;

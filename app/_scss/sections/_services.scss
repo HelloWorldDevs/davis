@@ -8,7 +8,7 @@
     h2 {
       color: $c-blue-2;
       padding-top: $spacing-md;
-      @include h3;
+      @include h2;
       font-weight: 600;
     }
     p {
@@ -38,9 +38,16 @@
       border: solid 2px white;
     }
     .row {
-      display: flex;
-      .copy {
-        @include vertical-center;
+      @media screen and (min-width: $width-md+1) {
+        display: flex;
+        .copy {
+          @include vertical-center;
+        }
+      }
+    }
+    @media screen and (max-width: $width-md) {
+      .col-sm-4 {
+        text-align: center;
       }
     }
   }
@@ -57,7 +64,7 @@
   }
 
   .float-image-one {
-    width: 60%;
+    width: 55%;
     max-width: 700px;
     position: absolute;
     bottom: 0px;
@@ -75,6 +82,9 @@
     img {
       height: 350px;
       z-index: -10;
+    }
+    @media screen and (max-width: $width-sm) {
+      height: 250px;
     }
   }
 
