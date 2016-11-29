@@ -1,6 +1,7 @@
 .location-card {
   background: $c-white;
   margin: 30px 0;
+  border-radius: 10px;
   @media (max-width: $width-md) {
     margin-bottom: 5px;
     margin-top: 0px;
@@ -16,20 +17,28 @@
     padding-bottom: $spacing-sm;
   }
   h6 {
-    font-family: $ff-neuton;
-    color: $c-black-blue;
+    font-family: $ff-open;
+    color: $c-grey-location;
     margin-bottom: 0;
     line-height: $lh-sm;
   }
   a>h6 {
-    font-family: $ff-neuton;
-    color: $c-teal;
+    font-family: $ff-open;
+    color: $c-blue-6;
     padding-bottom: $spacing-md;
   }
   .phone-number {
     line-height: $lh-sm;
-    color: $c-brick;
-    a:hover { color: $c-brick !important; }
+    color: $c-dark-brown;
+    font-family: $ff-lato;
+    font-weight: 900;
+    a:hover {
+      color: $c-dark-brown !important;
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: none;
+    }
   }
   .btn {
     margin-bottom: $spacing-sm;
@@ -69,57 +78,37 @@
   }
 }
 
-.hours {
-  & li {
-    list-style: none;
+.hours-table {
+  color: $c-grey-location;
+  padding-bottom: $spacing-md;
+  h5 {
+    color: $c-dark-brown;
+    font-family: $ff-lato;
+    font-weight: 900;
+  }
+  th {
+    width: 1px;
+    white-space: nowrap;
+    padding-right: 20px;
     text-align: left;
   }
-}
 
-th {
-width: 1px;
-white-space: nowrap;
-text-align: right;
-}
+  td {
+    text-align: right;
+  }
 
-td {
-  text-align: right;
-}
-
-table {
-  max-width: 250px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-
-.hours .row {
-  @media (max-width: $width-lg) {
-    max-width: 550px;
+  table {
+    max-width: 250px;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 0px;
   }
 }
 
-.left-hours-fix {
-  padding-left: 10%;
-  @media (max-width: $width-lg) {
-    padding-left: 30%;
-
-  }
-  @media (max-width: 480px) {
-    padding-left: 7%;
-
-  }
-  @media (max-width: $width-sm) {
-
-  }
-}
 
 #google-map5 {
-  height: 600px;
+  height: 1000px;
   @media (max-width: $width-md) {
     height: 300px;
   }
