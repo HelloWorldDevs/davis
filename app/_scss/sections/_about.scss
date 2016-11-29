@@ -25,6 +25,10 @@
   img {
     border-radius: 10000px;
     border: 4px solid $c-white;
+    @media screen and (max-width: $width-md) {
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   .row {
@@ -32,6 +36,11 @@
       display: flex;
       img {
         @include vertical-center();
+      }
+    }
+    @media screen and (max-width: $width-md) {
+      .col-md-6:first-child {
+        text-align: center;
       }
     }
   }
