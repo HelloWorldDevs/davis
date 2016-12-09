@@ -8,20 +8,15 @@
 }
 
 #section-insurance {
+
+  position: relative;
   padding-top: 50px;
-  background-image: url('/assets/davis-insurance-bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center top;
-  @media (max-width: $width-sm) {
-    padding-top: 40px;
-    background-color: white;
-    background-image: none;
-  }
+  background-image: url("/assets/bg-tile-light.jpg");
+  @include parallax-background();
+  
   & p {
     line-height: 1.2;
   }
-
   h2 {
     color: $c-blue;
     font-family: $ff-lato;
@@ -48,5 +43,15 @@
   h6 {
     font-size: 16px;
     font-family: $ff-open;
+  }
+  .floating-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    text-align: right;
+    img {
+      max-height: 550px;
+    }
   }
 }
