@@ -134,7 +134,15 @@
     }
   });
 
-  
+  new Swiper('.swiper-container', {
+    speed: 400,
+    autoplay: 6000,
+    loop: true,
+    autoplayDisableOnInteraction: false
+  });
+
+
+
   // Fix for menu scroll to links. Offsets are needed for desktop but not tablet or mobile.
   // ======================================================================================
   
