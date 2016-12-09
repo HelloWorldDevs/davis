@@ -37,25 +37,27 @@
         position: relative;
         display: inline-block;
         border-radius: 10000px;
-        height: 130px;
-        width: 130px;
+        height: 168px;
+        width: 168px;
+        border: 2px white solid;
       }
       h1 {
         color: $c-white;
         margin-bottom: 0;
+        margin-left: 10px;
         padding: $spacing-sm;
         padding-top: $spacing-md;
-        line-height: $lh-xs;
+        line-height: 100px;
         font-family: $ff-open;
         font-weight: 700;
-        font-size: 72px !important;
+        font-size: 100px !important;
         &:before {
           content: '$';
-          font-size: 22px;
-          font-weight: 400;
+          font-size: 35px;
+          font-weight: 100;
           position: absolute;
-          top: $spacing-md;
-          left: 12px;
+          top: 0;
+          left: 15px;
         }
 
       }
