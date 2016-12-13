@@ -53,3 +53,8 @@
   color: $c-white !important;
   text-decoration: none;
 }
+
+.owl-item>a {
+  position: relative;
+  z-index: 10;
+}

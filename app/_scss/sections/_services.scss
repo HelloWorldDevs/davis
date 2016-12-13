@@ -96,8 +96,16 @@
 #section-services-carousel {
   border-top: white solid 3px;
   border-bottom: white solid 3px;
-  .owl-item {
+
+  .owl-item>div {
     @include hover-plus;
+    &:hover:after {
+      margin-top: 0;
+    }
+  }
+  .owl-item>a {
+    display: block;
+    line-height: 0;
   }
   .floating-owl-title {
     text-align: center;
